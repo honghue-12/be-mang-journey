@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        game: {
+          "rice-green": "hsl(var(--rice-green))",
+          "rice-gold": "hsl(var(--rice-gold))",
+          bamboo: "hsl(var(--bamboo))",
+          terracotta: "hsl(var(--terracotta))",
+          "lotus-pink": "hsl(var(--lotus-pink))",
+          "water-blue": "hsl(var(--water-blue))",
+          "scroll-cream": "hsl(var(--scroll-cream))",
+          "seal-gold": "hsl(var(--seal-gold))",
+          "village-glow": "hsl(var(--village-glow))",
+          "hp-green": "hsl(var(--hp-green))",
+          "water-bar": "hsl(var(--water-bar))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +70,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      boxShadow: {
+        village: "var(--shadow-village)",
+        card: "var(--shadow-card)",
+        float: "var(--shadow-float)",
       },
       borderRadius: {
         lg: "var(--radius)",
