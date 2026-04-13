@@ -17,6 +17,7 @@ export const VillagePopup = ({ village, onClose }: VillagePopupProps) => {
   if (!village) return null;
 
   const isLocked = !village.completed && !village.current;
+  const navigate = useNavigate();
 
   return (
     <AnimatePresence>
