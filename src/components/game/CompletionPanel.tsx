@@ -6,10 +6,10 @@ const accessories = [
   { name: "Khăn Rằn", icon: "🧣", collected: true },
   { name: "Guốc Mộc", icon: "👞", collected: true },
   { name: "Bút Lông", icon: "🖌️", collected: true },
-  { name: "Sổ Thông Hành", icon: "📜", collected: false },
+  { name: "Sổ T.Hành", icon: "📜", collected: false },
   { name: "Trống Đồng", icon: "🥁", collected: false },
   { name: "Đèn Lồng", icon: "🏮", collected: false },
-  { name: "Ấn Trạng Nguyên", icon: "🔱", collected: false },
+  { name: "Ấn T.Nguyên", icon: "🔱", collected: false },
 ];
 
 export const CompletionPanel = () => {
@@ -17,60 +17,55 @@ export const CompletionPanel = () => {
 
   return (
     <motion.div
-      className="bg-card/95 backdrop-blur-md rounded-2xl border border-border p-4 shadow-card"
+      className="bg-card/95 backdrop-blur-md rounded-2xl border border-border p-3 shadow-card"
       initial={{ y: 40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.6 }}
+      transition={{ delay: 0.4 }}
     >
-      <div className="flex items-center gap-3 mb-3">
+      <div className="flex items-center gap-3 mb-2.5">
         <img
           src={beMangComplete}
           alt="Bé Măng hoàn thiện"
-          className="w-16 h-16 object-contain"
+          className="w-12 h-12 object-contain"
           loading="lazy"
           width={512}
           height={640}
         />
-        <div>
-          <h3 className="font-display text-sm font-bold text-foreground">
-            Giáp Trạng Nguyên
-          </h3>
-          <p className="text-xs text-muted-foreground font-body">
-            Thu thập đủ 8 vật phẩm để hoàn thành bộ giáp
-          </p>
-          <div className="flex items-center gap-1 mt-1">
-            <div className="h-2 flex-1 rounded-full bg-muted overflow-hidden">
-              <motion.div
-                className="h-full rounded-full bg-game-seal-gold"
-                initial={{ width: 0 }}
-                animate={{ width: `${(collected / 8) * 100}%` }}
-                transition={{ duration: 1.2, delay: 0.8 }}
-              />
-            </div>
-            <span className="text-xs font-display font-bold text-game-seal-gold">
+        <div className="flex-1">
+          <div className="flex items-center justify-between">
+            <h3 className="font-display text-xs font-bold text-foreground">
+              Giáp Trạng Nguyên
+            </h3>
+            <span className="text-[10px] font-display font-bold text-game-seal-gold">
               {collected}/8
             </span>
+          </div>
+          <div className="h-1.5 rounded-full bg-muted overflow-hidden mt-1">
+            <motion.div
+              className="h-full rounded-full bg-game-seal-gold"
+              initial={{ width: 0 }}
+              animate={{ width: `${(collected / 8) * 100}%` }}
+              transition={{ duration: 1, delay: 0.6 }}
+            />
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-8 gap-1">
         {accessories.map((acc, i) => (
           <motion.div
             key={acc.name}
-            className={`flex flex-col items-center gap-0.5 p-2 rounded-xl border text-center
+            className={`flex flex-col items-center gap-0.5 py-1 rounded-lg text-center
               ${acc.collected
-                ? "bg-game-seal-gold/10 border-game-seal-gold/40"
-                : "bg-muted/50 border-border opacity-50"
+                ? "bg-game-seal-gold/10"
+                : "opacity-30"
               }`}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.8 + i * 0.06, type: "spring" }}
+            transition={{ delay: 0.6 + i * 0.04, type: "spring" }}
+            title={acc.name}
           >
-            <span className="text-lg">{acc.icon}</span>
-            <span className="text-[9px] font-display font-semibold text-foreground/70 leading-tight">
-              {acc.name}
-            </span>
+            <span className="text-sm">{acc.icon}</span>
           </motion.div>
         ))}
       </div>
