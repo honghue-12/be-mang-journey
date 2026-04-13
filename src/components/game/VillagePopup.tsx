@@ -73,7 +73,7 @@ export const VillagePopup = ({ village, onClose }: VillagePopupProps) => {
                 </div>
               ) : village.current ? (
                 <button
-                  onClick={onClose}
+                  onClick={() => { onClose(); navigate("/chapter3"); }}
                   className="w-full bg-primary text-primary-foreground font-display font-bold text-sm py-3 rounded-xl shadow-float hover:opacity-90 active:scale-[0.98] transition-all"
                 >
                   Bắt đầu hành trình 🚀
