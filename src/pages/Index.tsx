@@ -70,7 +70,7 @@ const Index = () => {
           {/* Character at current village with label */}
           {currentVillage && (
             <motion.div
-              className="absolute z-20 flex flex-col items-center"
+              className="absolute z-20 flex flex-col items-center pointer-events-none"
               style={{
                 top: currentVillage.position.top,
                 left: currentVillage.position.left,
