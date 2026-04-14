@@ -58,13 +58,13 @@ const Chapter1 = () => {
                   Thư mời chính thức
                 </p>
                 <h2 className="font-display text-xl font-bold text-foreground leading-snug">
-                  Kính gửi<br />
+                  Xin chào<br />
                   <span className="text-primary">{candidateName}</span>
                 </h2>
                 <div className="w-8 h-0.5 bg-game-seal-gold/40 mx-auto" />
                 <p className="text-xs text-muted-foreground font-body leading-relaxed">
                   Chúc mừng bạn đã vượt qua vòng sơ tuyển!
-                  Hãy bắt đầu <strong>Hành trình Chép sử</strong> cùng NhiLe Team.
+                  Hãy bắt đầu <strong>Hành trình phát triển cùng NhiLe Team</strong>.
                 </p>
                 <div className="bg-primary/5 border border-primary/15 rounded-xl p-2.5">
                   <p className="text-[10px] text-muted-foreground font-body">
@@ -211,7 +211,7 @@ const Chapter1 = () => {
               Hành trình bắt đầu!
             </h2>
             <p className="text-sm text-muted-foreground font-body mb-1 max-w-xs leading-relaxed">
-              Ghé thăm 8 làng nghề, thu thập phụ kiện, và hoàn thành bộ <strong>Giáp Trạng Nguyên</strong>.
+              Ghé thăm các làng nghề, trải nghiệm văn hóa, và thu thập phụ kiện trên hành trình phát triển.
             </p>
 
             <motion.div
