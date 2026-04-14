@@ -19,10 +19,6 @@ export const VillagePopup = ({ village, onClose }: VillagePopupProps) => {
   const navigate = useNavigate();
   const [confirmed, setConfirmed] = useState(false);
 
-  if (!village) return null;
-
-  const isLocked = !village.completed && !village.current;
-
   const handleJoin = () => {
     setConfirmed(true);
     // Simulate adding to calendar
